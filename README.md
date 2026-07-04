@@ -32,8 +32,7 @@ Freighter Wallet
 
 # 🎥 Demo Video
 
-**Demo Link:**  
-ADD_YOUTUBE_VIDEO_LINK_HERE
+[**Demo Link:**](https://drive.google.com/file/d/1hG7aL7-fVA0JEII6mdCtELtUWKwsujXE/view?usp=drivesdk)
 
 ### Demonstrated Flow
 
