@@ -18,7 +18,7 @@ Funds release milestone-by-milestone. No intermediary. No fees. No trust require
 
 ## 🔗 Live Demo
 
-> **[https://anchorbridge-taupe.vercel.app](https://anchorbridge-taupe.vercel.app)**
+> **[https://anchorbridge-taupe.vercel.app](https://anchor1bridge.netlify.app/)**
 
 Connect your Freighter wallet on Stellar Testnet to interact with the live deployment.
 
@@ -79,20 +79,20 @@ AnchorBridge is a decentralized milestone-based escrow platform built on **Stell
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    FRONTEND (React + TypeScript)             │
+│                    FRONTEND (React + TypeScript)            │
 │  ┌──────────────┐  ┌───────────────┐  ┌─────────────────┐   │
 │  │  Freighter   │  │  StellarSvc   │  │  EventListener  │   │
 │  │  Wallet API  │  │  (Horizon +   │  │  (Soroban RPC   │   │
 │  │              │  │   Soroban RPC)│  │   getEvents)    │   │
 │  └──────┬───────┘  └───────┬───────┘  └────────┬────────┘   │
-│         │                  │                   │             │
-│         └──────────────────┴───────────────────┘             │
-│                            │                                 │
-│                    ┌───────┴────────┐                        │
-│                    │  Zustand Store │                        │
-│                    │  (Global State)│                        │
-│                    └───────┬────────┘                        │
-│                            │                                 │
+│         │                  │                   │            │
+│         └──────────────────┴───────────────────┘            │
+│                            │                                │
+│                    ┌───────┴────────┐                       │
+│                    │  Zustand Store │                       │
+│                    │  (Global State)│                       │
+│                    └───────┬────────┘                       │
+│                            │                                │
 │         ┌──────────────────┼──────────────────┐             │
 │   ┌─────┴──────┐   ┌───────┴──────┐  ┌────────┴──────┐      │
 │   │ Dashboard  │   │   Projects   │  │    Wallet     │      │
@@ -106,19 +106,19 @@ AnchorBridge is a decentralized milestone-based escrow platform built on **Stell
                     └────────┬────────┘
                              │
 ┌────────────────────────────┴────────────────────────────────┐
-│              SOROBAN SMART CONTRACT (Rust)                    │
-│                                                              │
-│  ┌─────────┐  ┌──────────┐  ┌─────────┐  ┌──────────────┐  │
-│  │ project │  │milestone │  │ escrow  │  │   payment    │  │
-│  │  .rs    │  │   .rs    │  │   .rs   │  │     .rs      │  │
-│  └─────────┘  └──────────┘  └─────────┘  └──────────────┘  │
-│  ┌─────────┐  ┌──────────┐  ┌─────────┐  ┌──────────────┐  │
-│  │ storage │  │   auth   │  │ events  │  │  reputation  │  │
-│  │   .rs   │  │   .rs    │  │   .rs   │  │     .rs      │  │
-│  └─────────┘  └──────────┘  └─────────┘  └──────────────┘  │
-│                                                              │
-│              Token SAC Contract (inter-contract call)        │
-│         CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC  │
+│              SOROBAN SMART CONTRACT (Rust)                  │
+│                                                             │
+│  ┌─────────┐  ┌──────────┐  ┌─────────┐  ┌──────────────┐   │
+│  │ project │  │milestone │  │ escrow  │  │   payment    │   │
+│  │  .rs    │  │   .rs    │  │   .rs   │  │     .rs      │   │ 
+│  └─────────┘  └──────────┘  └─────────┘  └──────────────┘   │ 
+│  ┌─────────┐  ┌──────────┐  ┌─────────┐  ┌──────────────┐   │ 
+│  │ storage │  │   auth   │  │ events  │  │  reputation  │   │ 
+│  │   .rs   │  │   .rs    │  │   .rs   │  │     .rs      │   │ 
+│  └─────────┘  └──────────┘  └─────────┘  └──────────────┘   │
+│                                                             │
+│             Token SAC Contract (inter-contract call)        │
+│   CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
