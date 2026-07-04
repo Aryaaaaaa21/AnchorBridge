@@ -1,0 +1,47 @@
+name: TS React Frontend CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  typescript-frontend:
+    name: TS React Frontend CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        run: npm ci
+
+      - name: Run Oxlint Linter
+        run: npm run lint
+
+      - name: Run Frontend Tests
+        run: npm run test
+
+      - name: Run Production Build
+        run: npm run build
+
+      - name: Deploy to Netlify
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './dist'
+          production-deploy: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-deployment-environment: 'Production'
+          github-deployment-description: 'Production Deploy from GitHub Actions'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
