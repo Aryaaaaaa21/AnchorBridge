@@ -23,7 +23,6 @@ Thumbs.db
 target/
 contracts/escrow/target/
 **/*.rs.bk
-Cargo.lock
 
 # Environment files
 .env
