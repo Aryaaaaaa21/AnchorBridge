@@ -401,55 +401,6 @@ MIT License
 
 ---
 
-# 📸 Screenshots
-
-- **Landing Page**
-  ![Landing Page Placeholder](docs/screenshots/landing_page_placeholder.png)
-
-- **Dashboard**
-  ![Dashboard Placeholder](docs/screenshots/dashboard_placeholder.png)
-
-- **Wallet Connected**
-  ![Wallet Connected Placeholder](docs/screenshots/wallet_connected_placeholder.png)
-
-- **Balance Display**
-  ![Balance Display Placeholder](docs/screenshots/balance_display_placeholder.png)
-
-- **Create Project**
-  ![Create Project Placeholder](docs/screenshots/create_project_placeholder.png)
-
-- **Create Milestone**
-  ![Create Milestone Placeholder](docs/screenshots/create_milestone_placeholder.png)
-
-- **Escrow Funding**
-  ![Escrow Funding Placeholder](docs/screenshots/escrow_funding_placeholder.png)
-
-- **Activity Feed**
-  ![Activity Feed Placeholder](docs/screenshots/activity_feed_placeholder.png)
-
-- **Mobile Responsive UI**
-  ![Mobile Responsive UI Placeholder](docs/screenshots/mobile_responsive_ui_placeholder.png)
-
-- **CI/CD Pipeline**
-  ![CI/CD Pipeline Placeholder](docs/screenshots/cicd_pipeline_placeholder.png)
-
-- **Contract Tests**
-  ![Contract Tests Placeholder](docs/screenshots/contract_tests_placeholder.png)
-
-- **Frontend Tests**
-  ![Frontend Tests Placeholder](docs/screenshots/frontend_tests_placeholder.png)
-
-- **Analytics Dashboard**
-  ![Analytics Dashboard Placeholder](docs/screenshots/analytics_dashboard_placeholder.png)
-
-- **Monitoring Dashboard**
-  ![Monitoring Dashboard Placeholder](docs/screenshots/monitoring_dashboard_placeholder.png)
-
-- **Explorer Verification**
-  ![Explorer Verification Placeholder](docs/screenshots/explorer_verification_placeholder.png)
-
----
-
 # 🏆 Level 4 Compliance
 
 ### Production MVP
