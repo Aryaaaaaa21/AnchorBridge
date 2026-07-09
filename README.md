@@ -1,9 +1,5 @@
 # AnchorBridge — Decentralized Milestone Escrow on Stellar
 
-<div align="center">
-
-![AnchorBridge Banner](docs/assets/banner.png)
-
 ### Trustless Freelance Collaboration Powered by Stellar & Soroban
 
 Clients lock funds into on-chain escrow. Freelancers complete milestones. Payments release automatically through smart contract execution.
