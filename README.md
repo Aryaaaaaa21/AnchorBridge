@@ -434,21 +434,7 @@ MIT License
 - [x] Contract Address
 
 ---
-
-# 📊 Analytics
-
-### Google Analytics Dashboard
-![Analytics Dashboard Placeholder](docs/screenshots/analytics_dashboard_placeholder.png)
-
-### Metrics Tracked:
-- Wallet Connections
-- Projects Created
-- Milestones Created
-- Escrow Funded
-- Payments Released
-- Page Visits
-
----
+ 
 
 # 📈 User Testing & Validation
 
@@ -457,63 +443,6 @@ https://forms.gle/ETdFv29rrW8FxUKNA
 
 **Responses Sheet:**  
 https://docs.google.com/spreadsheets/d/1TEL4wkYVrQ3BNdgKyFra5Dp9OQISka6aL9yaFq_eKD0/edit?usp=sharing
-
-## User Feedback Collection
-
-**Purpose:**  
-Collect real user feedback and wallet interaction proof.
-
-| Name | Wallet Address | Transaction Hash | Interaction | Feedback |
-|--------|--------|--------|--------|--------|
-| Demo Client 1 | GDA7MJQH3ALIC...XKPQ | a1b2c3d4... | Fund Escrow | Seamless payment release, very simple flow. |
-| Demo Dev 1 | GBOB3BUILDER...Z7MQ | c9d0e1f2... | Submit Milestone | Instant milestone payments give me complete peace of mind. |
-| Demo User 3 | GCH4LUNA...9WRT | e5f6a7b8... | Connect Wallet | Freighter integration works great. |
-| Test Freelancer | GDAV3ART...8VVX | f3e2d1c0... | Approve Milestone | Tested on mobile and the responsive layout is perfect. |
-| Validator | GEVE9DEV...ABCD | 1a2b3c4d... | Refund Client | Transparent Soroban operations with full feedback. |
-
----
-
-# 👥 User Adoption
-
-### 10+ User Wallet Interaction Proof
-
-| User | Wallet Address | Interaction |
-|--------|--------|--------|
-| User 1 | GDA7MJQH3ALIC...XKPQ | Connected Wallet, Created Project |
-| User 2 | GBOB3BUILDER...Z7MQ | Created Milestone, Approved Escrow |
-| User 3 | GCH4LUNA...9WRT | Disputed Milestone, Setup Settings |
-| User 4 | GDAV3ART...8VVX | Funded Escrow, Released Payment |
-| User 5 | GEVE9DEV...ABCD | Processed Refund, Checked Contract |
-| User 6 | GB7D9E...JKLM | Connected Wallet, Page View |
-| User 7 | GC8F0A...OPQR | Connected Wallet, View Dashboard |
-| User 8 | GD9G1B...STUV | Created Project, Created Milestone |
-| User 9 | GE0H2C...WXYZ | Funded Escrow, Completed Onboarding |
-| User 10 | GF1I3D...ABCD | Submitted Milestone, Feedback |
-
----
-
-# 📋 Feedback Summary
-
-- **Total Responses:** 5 (Seeded reviews) + live user submissions
-- **Average Rating:** 4.8 / 5.0 Stars
-- **Most Requested Feature:** Multi-token support (USDC, yXLM)
-- **Most Reported Issue:** Minor responsive layout alignment on ultra-wide monitors
-- **Suggested Improvements:** Bulk milestones import from CSV, additional dashboard analytics
-
----
-
-# 🛡 Monitoring
-
-**Monitoring Tool:**  
-Google Analytics / Vercel Analytics / Custom Sentry Integration
-
-![Monitoring Screenshot Placeholder](docs/screenshots/monitoring_dashboard_placeholder.png)
-
-### Items Tracked:
-- Failed Transactions
-- Wallet Connection Errors
-- Page Visits
-- User Engagement Metrics
 
 ---
 
