@@ -11,13 +11,32 @@ import { Wallet } from './pages/Wallet';
 import { Profile } from './pages/Profile';
 import { Settings } from './pages/Settings';
 import { SmartContract } from './pages/SmartContract';
+import { Feedback } from './pages/Feedback';
+import { ProductMetrics } from './pages/ProductMetrics';
+import { Monitoring } from './pages/Monitoring';
+import { ActivityFeed } from './pages/ActivityFeed';
+import { Reputation } from './pages/Reputation';
 import { Toaster } from 'sonner';
+import { OnboardingTrigger } from './components/Onboarding';
 
 import { useEffect } from 'react';
 import { sorobanEventListener } from './services/eventListener';
+import { initGoogleAnalytics, initVercelAnalytics, trackPageView } from './services/analytics';
+import { initSentry, seedDemoSentryEvents } from './services/monitoring';
+import { seedDemoFeedback } from './services/feedback';
 
 function App() {
   useEffect(() => {
+    // Initialize analytics & monitoring
+    initGoogleAnalytics();
+    initVercelAnalytics();
+    initSentry();
+    seedDemoSentryEvents();
+    seedDemoFeedback();
+
+    // Track initial page view
+    trackPageView(window.location.pathname, document.title);
+
     // Start listening to live Soroban events
     sorobanEventListener.start();
     return () => {
@@ -28,6 +47,7 @@ function App() {
   return (
     <BrowserRouter>
       <Toaster position="top-right" richColors closeButton toastOptions={{ style: { fontFamily: 'var(--font-sans)' } }} />
+      <OnboardingTrigger />
       <Routes>
         {/* Public Routes with Navbar / No Sidebar */}
         <Route path="/" element={<Layout />}>
@@ -44,6 +64,13 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="settings" element={<Settings />} />
           <Route path="contracts" element={<SmartContract />} />
+
+          {/* Level 4 MVP Pages */}
+          <Route path="feedback" element={<Feedback />} />
+          <Route path="metrics" element={<ProductMetrics />} />
+          <Route path="monitoring" element={<Monitoring />} />
+          <Route path="activity" element={<ActivityFeed />} />
+          <Route path="reputation" element={<Reputation />} />
 
           {/* Catch-all Redirect */}
           <Route path="*" element={<Navigate to="/" replace />} />

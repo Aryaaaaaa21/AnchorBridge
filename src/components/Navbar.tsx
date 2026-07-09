@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '../store/useStore';
-import { Sun, Moon, Bell, LogOut, Wallet, Menu, X, ArrowRight, FolderKanban, PlusCircle, UserCircle, Settings as SettingsIcon, LayoutDashboard, Shield } from 'lucide-react';
+import { Sun, Moon, Bell, LogOut, Wallet, Menu, X, ArrowRight, FolderKanban, PlusCircle, UserCircle, Settings as SettingsIcon, LayoutDashboard, Shield, Activity, BarChart2, AlertOctagon, Heart, Star } from 'lucide-react';
 import { Logo } from './Logo';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -30,7 +30,12 @@ export const Navbar: React.FC = () => {
                       location.pathname.startsWith('/contracts') || 
                       location.pathname.startsWith('/wallet') || 
                       location.pathname.startsWith('/profile') || 
-                      location.pathname.startsWith('/settings');
+                      location.pathname.startsWith('/settings') ||
+                      location.pathname.startsWith('/feedback') ||
+                      location.pathname.startsWith('/metrics') ||
+                      location.pathname.startsWith('/monitoring') ||
+                      location.pathname.startsWith('/activity') ||
+                      location.pathname.startsWith('/reputation');
 
   const unreadCount = notifications.filter(n => !n.read).length;
 
@@ -85,8 +90,9 @@ export const Navbar: React.FC = () => {
               <div className="flex items-center gap-4 text-sm font-medium">
                 <Link to="/dashboard" className="text-text-main hover:text-accent-brand transition-colors">Dashboard</Link>
                 <Link to="/projects" className="text-text-main hover:text-accent-brand transition-colors">Projects</Link>
-                <Link to="/contracts" className="text-text-main hover:text-accent-brand transition-colors">Contract</Link>
-                <Link to="/wallet" className="text-text-main hover:text-accent-brand transition-colors">Wallet</Link>
+                <Link to="/activity" className="text-text-main hover:text-accent-brand transition-colors">Activity</Link>
+                <Link to="/metrics" className="text-text-main hover:text-accent-brand transition-colors">Metrics</Link>
+                <Link to="/reputation" className="text-text-main hover:text-accent-brand transition-colors">Reputation</Link>
               </div>
             )}
 
@@ -295,6 +301,23 @@ export const Navbar: React.FC = () => {
                 </Link>
                 <Link to="/settings" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
                   <SettingsIcon className="h-4.5 w-4.5" /> Settings
+                </Link>
+                <div className="h-[1px] bg-border-app/50 w-full" />
+                <span className="text-[9px] font-black uppercase tracking-widest text-text-muted opacity-60">Level 4 MVP</span>
+                <Link to="/activity" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
+                  <Activity className="h-4.5 w-4.5" /> Activity Feed
+                </Link>
+                <Link to="/metrics" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
+                  <BarChart2 className="h-4.5 w-4.5" /> Product Metrics
+                </Link>
+                <Link to="/monitoring" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
+                  <AlertOctagon className="h-4.5 w-4.5" /> Monitoring
+                </Link>
+                <Link to="/feedback" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
+                  <Heart className="h-4.5 w-4.5" /> Feedback
+                </Link>
+                <Link to="/reputation" onClick={() => setMobileMenuOpen(false)} className="text-text-main hover:text-accent-brand py-1.5 flex items-center gap-2">
+                  <Star className="h-4.5 w-4.5" /> Reputation
                 </Link>
               </div>
             )}
