@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Star, Shield, CheckCircle, TrendingUp, Lock, FolderKanban,
-  Award, Zap, Clock, DollarSign
+  Award, Zap
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
+import type { Project } from '../store/useStore';
 import {
   ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis,
   Radar, Tooltip
@@ -20,7 +21,7 @@ const itemVariants = {
 };
 
 // ── Compute reputation from projects ──────────────────────────────────────────
-function computeReputation(projects: ReturnType<typeof useStore>['projects']) {
+function computeReputation(projects: Project[]) {
   const completed = projects.filter(p => p.status === 'completed');
   const total = projects.length;
   const disputed = projects.filter(p => p.status === 'disputed').length;
@@ -57,7 +58,7 @@ const DEMO_REP = {
 };
 
 export const Reputation: React.FC = () => {
-  const { user, projects } = useStore();
+  const { projects } = useStore();
   const realRep = computeReputation(projects);
 
   // Merge real + demo for richer display

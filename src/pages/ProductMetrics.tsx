@@ -215,7 +215,7 @@ export const ProductMetrics: React.FC = () => {
           <div className="h-48">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
-                <Pie data={DEVICE_DATA} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={65} label={({ name, value }) => `${value}%`} labelLine={false} fontSize={9}>
+                <Pie data={DEVICE_DATA} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={65} label={({ value }) => `${value}%`} labelLine={false} fontSize={9}>
                   {DEVICE_DATA.map((_, idx) => (
                     <Cell key={idx} fill={COLORS[idx % COLORS.length]} />
                   ))}

@@ -10,7 +10,7 @@ import {
 } from '../services/monitoring';
 import { toast } from 'sonner';
 import { 
-  ResponsiveContainer, PieChart, Pie, Cell, Tooltip, Legend,
+  ResponsiveContainer, PieChart, Pie, Cell, Tooltip,
   BarChart, Bar, XAxis, YAxis, CartesianGrid
 } from 'recharts';
 

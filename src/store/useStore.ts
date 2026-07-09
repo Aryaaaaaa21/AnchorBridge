@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import type { Project, Transaction } from '../utils/mockData';
+export type { Project, Transaction };
 import { INITIAL_PROJECTS, INITIAL_TRANSACTIONS } from '../utils/mockData';
 import { stellarService } from '../services/stellar';
 import { toast } from 'sonner';

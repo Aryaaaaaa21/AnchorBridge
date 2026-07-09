@@ -5,6 +5,7 @@ import {
   RefreshCw, Zap, Filter
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
+import type { Project } from '../store/useStore';
 
 // ── Activity Feed Event Types ──────────────────────────────────────────────────
 
@@ -27,7 +28,7 @@ const EVENT_META: Record<FeedEvent['type'], { label: string; icon: React.FC<any>
   dispute_raised: { label: 'Dispute Raised', icon: Zap, color: 'text-red-500', bg: 'bg-red-500/10' },
 };
 
-function mapActivityToFeed(projects: ReturnType<typeof useStore>['projects']): FeedEvent[] {
+function mapActivityToFeed(projects: Project[]): FeedEvent[] {
   const events: FeedEvent[] = [];
 
   for (const p of projects) {
